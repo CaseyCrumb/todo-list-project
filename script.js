@@ -17,4 +17,16 @@ window.addEventListener('load', function() {// Added a event listener to the 'wi
         addTaskToList(task); //task variable to add a new task to both task list and local storage.
         localStorage.setItem(task, task);
        });
+        function addTaskToList(task) {
+            var listItem = document.createElement('li');
+            listItem.textContent = task;
+
+            listItem.addEventListener('click', function() {
+                listItem.remove();
+                localStorage.removeItem(task);
+            });
+            list.appendChild(listItem);
+          }
+      
+      
        
