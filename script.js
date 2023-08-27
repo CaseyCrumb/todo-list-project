@@ -6,3 +6,15 @@ window.addEventListener('load', function() {// Added a event listener to the 'wi
     for (var i = 0; i < localStorage.length; i++) { //Created a for loop to repeat until condition is met, condition being varible 'i'  is less than the local strorage length thenm it will increase in incriments of 1. 
         addTaskToList(localStorage.key(i)); //Used to fetch 'i'
     }}); 
+    form.addEventListener('submit', function(event) { //Added a event listener to 'submit' when the function 'event' occurs.
+        event.preventDefault(); // this will prevent page from refreshing evertime a task is 'submit'.
+       
+       
+        var task = input.value;// added new variable to store what user enters.
+        input.value = ''; // imput vaule left blank to reset string.
+       
+       
+        addTaskToList(task); //task variable to add a new task to both task list and local storage.
+        localStorage.setItem(task, task);
+       });
+       
