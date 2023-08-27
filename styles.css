@@ -12,3 +12,8 @@ h1 {
     color: white;
     text-align: center;
 }
+#container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
