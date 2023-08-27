@@ -17,3 +17,13 @@ h1 {
     margin: auto;
     overflow: hidden;
 }
+#task-creator {
+    float: left;
+    width: 45%;
+    padding: 2.5%;
+}
+#task-list {
+    float: right;
+    width: 45%;
+    padding: 2.5%;
+}
